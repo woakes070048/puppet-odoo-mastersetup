@@ -1,2 +1,2 @@
-#dbbackup branch
-This is the dbbackup branch which controls the modules and roles applied to the dbbackup node.
+#production branch
+This branch is used to manage the modules and site.pp for the production odoo environment.
