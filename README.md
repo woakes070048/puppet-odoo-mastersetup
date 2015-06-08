@@ -19,7 +19,7 @@ puppet module install zack-r10k
 ```shell
 cd /tmp
 git clone https://github.com/localmotors/puppet-odoo-mastersetup.git
-cd puppetmaster_setup
+cd puppet-odoo-mastersetup
 ```
 * checkout the puppetmaster branch
 ```shell
