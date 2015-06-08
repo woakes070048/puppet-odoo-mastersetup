@@ -9,14 +9,14 @@ mod 'puppetlabs/concat'
 
 # custom modules from github
 mod 'profiles',
-  :git     => 'https://github.com/bhaymore/odoo_profiles.git',
+  :git     => 'https://github.com/localmotors/puppet-odoo-profiles.git',
   :branch  => 'master'
 mod 'useraccounts',
-  :git     => 'https://github.com/bhaymore/useraccounts.git',
+  :git     => 'https://github.com/localmotors/puppet-useraccounts.git',
   :branch  => 'master'
 mod 'roles',
-  :git     => 'https://github.com/bhaymore/odoo_roles.git',
+  :git     => 'https://github.com/localmotors/puppet-odoo-roles.git',
   :branch  => 'master'
 mod 'scripts',
-  :git     => 'https://github.com/bhaymore/odoo_scripts.git',
+  :git     => 'https://github.com/localmotors/puppet-odoo-scripts.git',
   :branch  => 'master'
