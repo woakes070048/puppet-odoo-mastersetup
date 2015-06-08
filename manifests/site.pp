@@ -1,1 +1,1 @@
-include roles::dev
+include roles::puppetmaster
