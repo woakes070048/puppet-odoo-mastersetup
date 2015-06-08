@@ -15,14 +15,14 @@ mod 'puppetlabs/apt'
 
 # custom modules from github
 mod 'odoo',
-  :git     => 'https://github.com/bhaymore/odoo_module.git',
+  :git     => 'https://github.com/localmotors/puppet-odoo.git',
   :branch  => 'master'
 mod 'profiles',
-  :git     => 'https://github.com/bhaymore/odoo_profiles.git',
+  :git     => 'https://github.com/localmotors/puppet-odoo-profiles.git',
   :branch  => 'master'
 mod 'useraccounts',
-  :git     => 'https://github.com/bhaymore/useraccounts.git',
+  :git     => 'https://github.com/localmotors/puppet-useraccounts.git',
   :branch  => 'master'
 mod 'roles',
-  :git     => 'https://github.com/bhaymore/odoo_roles.git',
+  :git     => 'https://github.com/localmotors/puppet-odoo-roles.git',
   :branch  => 'master'
