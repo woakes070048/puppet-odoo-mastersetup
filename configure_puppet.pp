@@ -105,6 +105,7 @@ file { "${::settings::confdir}/hiera.yaml":
 :hierarchy:
   - data
   - techusers
+  - supportusers
   - \"%{environment}\"
   - common
 :file:
