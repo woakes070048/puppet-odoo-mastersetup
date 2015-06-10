@@ -3,6 +3,7 @@ forge "http://forge.puppetlabs.com"
 # Modules from the puppet forge
 mod 'puppetlabs/ntp'
 mod 'puppetlabs/concat'
+mod 'puppetlabs/git'
 
 # dependencies of modules above. r10k does not yet fetch dependencies.
 
