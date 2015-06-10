@@ -6,6 +6,7 @@ mod 'puppetlabs/postgresql', '4.3.0'
 mod 'puppetlabs/nodejs', '0.8.0'
 mod 'puppetlabs/ntp'
 mod 'puppetlabs/vcsrepo'
+mod 'puppetlabs/git'
 
 # dependencies of modules above. r10k does not yet fetch dependencies.
 mod 'puppetlabs/stdlib'
