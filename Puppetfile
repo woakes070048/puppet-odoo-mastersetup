@@ -7,6 +7,7 @@ mod 'puppetlabs/nodejs', '0.8.0'
 mod 'puppetlabs/ntp'
 mod 'puppetlabs/vcsrepo'
 mod 'puppetlabs/git'
+mod 'puppetlabs/java_ks'
 
 # dependencies of modules above. r10k does not yet fetch dependencies.
 mod 'puppetlabs/stdlib'
