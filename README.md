@@ -51,6 +51,6 @@ service puppetdb restart
 ```
 * enable start on boot for puppetdb and puppetserver
 ```shell
-update-rd.d puppetdb defaults
-update-rd.d puppetserver defaults
+update-rc.d puppetdb defaults
+update-rc.d puppetserver defaults
 ```
