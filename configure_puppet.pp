@@ -104,6 +104,7 @@ file { "${::settings::confdir}/hiera.yaml":
 :yaml:
   :datadir: \"/etc/puppet/data\"
 :hierarchy:
+  - data
   - techusers
   - supportusers
   - \"%{environment}\"
