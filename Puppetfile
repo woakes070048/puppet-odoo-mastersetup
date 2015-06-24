@@ -28,6 +28,6 @@ mod 'useraccounts',
 mod 'roles',
   :git     => 'https://github.com/localmotors/puppet-odoo-roles.git',
   :branch  => 'master'
-  mod 'scripts',
+mod 'scripts',
   :git     => 'https://github.com/localmotors/puppet-odoo-scripts.git',
   :branch  => 'master'
