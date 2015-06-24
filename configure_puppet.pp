@@ -83,10 +83,11 @@ exec { 'install hiera-file gem':
 
 package { 'python-pip':
   ensure => 'installed'
-} ->
-exec { 'install aws tools':
-  command => '/usr/bin/pip install awscli',
-  unless  => '/usr/bin/pip freeze|/bin/grep awscli',
+}
+package { 'awscli':
+  ensure => 'installed',
+  provider => 'pip'
+  require => Package['python-pip'],
 }
 
 # setup hiera
@@ -103,10 +104,10 @@ file { "${::settings::confdir}/hiera.yaml":
 :yaml:
   :datadir: \"/etc/puppet/data\"
 :hierarchy:
-  - data
   - techusers
   - supportusers
   - \"%{environment}\"
+  - \"%{environment}/%{certname}\"
   - common
 :file:
   :datadir: \"/etc/puppet/data\"",
