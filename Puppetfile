@@ -1,15 +1,24 @@
 forge "http://forge.puppetlabs.com"
 
 # Modules from the puppet forge
+mod 'jfryman/nginx', '0.2.6'
+mod 'puppetlabs/postgresql', '4.3.0'
+mod 'puppetlabs/nodejs', '0.8.0'
 mod 'puppetlabs/ntp'
-mod 'puppetlabs/concat'
+mod 'puppetlabs/vcsrepo'
 mod 'puppetlabs/git'
 mod 'puppetlabs/java_ks'
 
 # dependencies of modules above. r10k does not yet fetch dependencies.
+mod 'puppetlabs/stdlib'
+mod 'puppetlabs/concat'
+mod 'puppetlabs/apt'
 
 
 # custom modules from github
+mod 'odoo',
+  :git     => 'https://github.com/localmotors/puppet-odoo.git',
+  :branch  => 'master'
 mod 'profiles',
   :git     => 'https://github.com/localmotors/puppet-odoo-profiles.git',
   :branch  => 'master'
