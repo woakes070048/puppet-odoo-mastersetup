@@ -86,7 +86,7 @@ package { 'python-pip':
 }
 package { 'awscli':
   ensure => 'installed',
-  provider => 'pip'
+  provider => 'pip',
   require => Package['python-pip'],
 }
 
