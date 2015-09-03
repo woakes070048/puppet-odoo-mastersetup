@@ -8,7 +8,6 @@ mod 'puppetlabs/ntp'
 mod 'puppetlabs/vcsrepo'
 mod 'puppetlabs/git'
 mod 'puppetlabs/java_ks'
-mod 'example42/sendmail'
 
 # dependencies of modules above. r10k does not yet fetch dependencies.
 mod 'puppetlabs/stdlib'
