@@ -1,12 +1,8 @@
-node /^puppet/ {
-  include roles::puppetmaster
-}
-
 node /^prod/ {
   include roles::production
 }
 
-node /erp.localmotors.com/ {
+node /erp?.localmotors.com/ {
   include roles::production
 }
 
