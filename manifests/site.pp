@@ -6,7 +6,7 @@ node /erp?.localmotors.com/ {
   include roles::production
 }
 
-node /odoo9.localmotors.com/ {
+node /^odoo9/ {
   include roles::odoo9
 }
 
