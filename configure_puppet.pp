@@ -111,8 +111,8 @@ file { "${::settings::confdir}/hiera.yaml":
 :yaml:
   :datadir: \"/etc/puppet/data\"
 :hierarchy:
-  - \"%{::certname}\"
-  - \"%{environment}\"
+  - \"%{::clientcert}\"
+  - \"%{::environment}\"
   - techusers
   - supportusers
   - common
