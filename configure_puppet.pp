@@ -92,9 +92,9 @@ package { 'python-pip':
   ensure => 'installed'
 }
 package { 'awscli':
-  ensure => 'installed',
+  ensure   => 'installed',
   provider => 'pip',
-  require => Package['python-pip'],
+  require  => Package['python-pip'],
 }
 
 # setup hiera
