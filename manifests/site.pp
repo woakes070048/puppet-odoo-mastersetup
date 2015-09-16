@@ -10,6 +10,10 @@ node /^odoo9/ {
   include roles::odoo9
 }
 
+node /^rdstest/ {
+  include roles::rdstest
+}
+
 node /^qa/ {
   include roles::qa
 }
