@@ -42,6 +42,13 @@ ini_setting { 'Remove depricated templatedir':
   section => 'main',
   setting => 'templatedir',
 }
+ini_setting { 'Set Eenvironment for agent':
+  ensure  => 'present',
+  path    => "${::settings::confdir}/puppet.conf",
+  section => 'agent',
+  setting => 'environment',
+  value   => 'puppetmaster',
+}
 
 
 # configure puppetdb.conf
