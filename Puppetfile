@@ -33,6 +33,3 @@ mod 'roles',
 mod 'scripts',
   :git     => 'https://github.com/localmotors/puppet-odoo-scripts.git',
   :branch  => 'master'
-mod 'mcollective',
-  :git     => 'https://github.com/puppet-community/puppet-mcollective.git',
-  :tag  => 'v2.1.1'
