@@ -8,11 +8,13 @@ mod 'puppetlabs/ntp'
 mod 'puppetlabs/vcsrepo'
 mod 'puppetlabs/git'
 mod 'puppetlabs/java_ks'
+mod 'puppet/mcollective', '2.1.1'
 
 # dependencies of modules above. r10k does not yet fetch dependencies.
 mod 'puppetlabs/stdlib'
 mod 'puppetlabs/concat'
 mod 'puppetlabs/apt'
+mod 'richardc/datacat'
 
 
 # custom modules from github
@@ -31,6 +33,3 @@ mod 'roles',
 mod 'scripts',
   :git     => 'https://github.com/localmotors/puppet-odoo-scripts.git',
   :branch  => 'master'
-mod 'mcollective',
-  :git     => 'https://github.com/puppet-community/puppet-mcollective.git',
-  :tag  => 'v2.1.1'
