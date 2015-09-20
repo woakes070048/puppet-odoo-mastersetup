@@ -5,9 +5,9 @@ node /^odoo-qa/ {
   include roles::qa
 }
 
-node /^vagrant-public/ {
+node /^vagrant(-|_)public/ {
   include roles::vagrant_public
 }
-node /^vagrant-private/ {
+node /^vagrant(-|_)private/ {
   include roles::vagrant_private
 }
