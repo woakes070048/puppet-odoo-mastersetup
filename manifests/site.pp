@@ -21,3 +21,9 @@ node /^qa/ {
 node /^dbbackup/ {
   include roles::dbbackup
 }
+
+# new structure
+node /^erp-prod/ {
+  include roles::production
+}
+
