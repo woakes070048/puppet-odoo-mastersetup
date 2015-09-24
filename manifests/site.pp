@@ -1,13 +1,9 @@
-node /^odoo-dev/ {
+node /^dev.erp/ {
   include roles::dev
 }
-node /^odoo-qa/ {
-  include roles::qa
-}
-
-node /^vagrant(-|_)public/ {
+node /^odoo_public/ {
   include roles::vagrant_public
 }
-node /^vagrant(-|_)private/ {
+node /^odoo_private/ {
   include roles::vagrant_private
 }
