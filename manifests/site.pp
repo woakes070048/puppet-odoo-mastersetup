@@ -1,4 +1,4 @@
-node /^prod.erp/ {
+node /^prod?.erp/ {
   include roles::production
 }
 
