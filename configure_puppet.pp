@@ -123,6 +123,7 @@ file { "${::settings::confdir}/hiera.yaml":
 user { 'git':
     ensure     => "present",
     managehome => true,
+    groups     => 'puppet',
   }
   file { '/home/git/.ssh':
     ensure  => 'directory',
@@ -154,7 +155,14 @@ user { 'git':
     owner   => 'git',
     group   => 'git',
     mode    => 0750,
-    source  => 'puppet:///modules/scripts/post-receive',
+    content  => '#!/bin/bash
+
+worktree="/etc/puppet/data"
+gitdir="/var/local/hiera.git"
+
+git --work-tree=${worktree} --git-dir=${gitdir} checkout -f
+chmod -R g-w,o= $worktree
+chgrp -R puppet $worktree',
     require => [User['git'],Exec['setup hiera repo']],
   }
   file { "${::settings::confdir}/data":
