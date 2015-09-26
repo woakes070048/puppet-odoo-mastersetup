@@ -119,9 +119,3 @@ file { "${::settings::confdir}/hiera.yaml":
 :file:
   :datadir: \"/etc/puppet/data\"",
 }
-file { "${::settings::confdir}/data":
-  ensure => 'directory',
-  owner  => 'puppet',
-  group  => 'puppet',
-  mode   => '0750',
-}
