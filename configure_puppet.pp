@@ -119,3 +119,54 @@ file { "${::settings::confdir}/hiera.yaml":
 :file:
   :datadir: \"/etc/puppet/data\"",
 }
+
+user { 'git':
+    ensure     => "present",
+    managehome => true,
+  }
+  file { '/home/git/.ssh':
+    ensure  => 'directory',
+    owner   => 'git',
+    group   => 'git',
+    mode    => 0750,
+    require => User['git'],
+  }
+  file { '/home/git/.ssh/authorized_keys':
+    owner   => 'git',
+    group   => 'git',
+    mode    => '600',
+    require => [User['git'],File['/home/git/.ssh']],
+  }
+  file { '/var/local/hiera.git':
+    ensure  => 'directory',
+    owner   => 'git',
+    group   => 'git',
+    mode    => 0750,
+    require => User['git'],
+  }
+  exec { 'setup hiera repo':
+    user     => 'git',
+    command  => '/usr/bin/git init --bare /var/local/hiera.git',
+    unless   => '/usr/bin/test -d /var/local/hiera.git./.git',
+    require  => [File['/var/local/hiera.git'],User['git']],
+  }
+  file { '/var/local/hiera.git/hooks/post-receive':
+    owner   => 'git',
+    group   => 'git',
+    mode    => 0750,
+    source  => 'puppet:///modules/scripts/post-receive',
+    require => [User['git'],Exec['setup hiera repo']],
+  }
+  file { "${::settings::confdir}/data":
+    ensure  => 'directory',
+    owner   => 'git',
+    group   => 'puppet',
+    mode    => 0750,
+    require => User['git'],
+  }
+  exec {'setup hiera data':
+    command => '/usr/bin/git clone /var/local/hiera.git /etc/puppet/data',
+    user    => 'git',
+    unless  => '/usr/bin/test -d /etc/puppet/data/.git',
+    require => [User['git'],Exec['setup hiera repo'],File["${::settings::confdir}/data"]],
+  }
