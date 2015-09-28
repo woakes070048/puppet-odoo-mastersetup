@@ -1,11 +1,11 @@
-node /^prod?.erp/ {
+node /^prod?.(erp|local)/ {
   include roles::production
 }
 
-node /^qa.erp/ {
+node /^qa.(erp|local)/ {
   include roles::qa
 }
 
-node /^dbbackup.erp/ {
+node /^dbbackup.(erp|local)/ {
   include roles::dbbackup
 }
