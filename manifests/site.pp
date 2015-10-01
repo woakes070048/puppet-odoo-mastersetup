@@ -10,6 +10,6 @@ node /^dbbackup.(erp|local)/ {
   include roles::dbbackup
 }
 
-node /redirects.(erp|local)/ {
+node /redirects/ {
   include roles::redirects
 }
