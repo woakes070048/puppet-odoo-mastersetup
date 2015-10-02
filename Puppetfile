@@ -32,3 +32,7 @@ mod 'roles',
 mod 'scripts',
   :git     => 'https://github.com/localmotors/puppet-odoo-scripts.git',
   :branch  => 'master'
+mod 's3fs',
+  :git     => 'https://github.com/localmotors/puppet-s3fs.git',
+  :branch  => 'master'
+  
