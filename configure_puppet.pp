@@ -155,11 +155,13 @@ user { 'git':
     owner   => 'git',
     group   => 'git',
     mode    => 0750,
-    content  => '#!/bin/bash
+    content => '#!/bin/bash
 
 worktree="/etc/puppet/data"
 gitdir="/var/local/hiera.git"
 
+cd ${worktree}
+git reset --hard
 git --work-tree=${worktree} --git-dir=${gitdir} checkout -f
 chmod -R g-w,o= $worktree
 chgrp -R puppet $worktree',
