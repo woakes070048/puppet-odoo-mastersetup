@@ -34,6 +34,3 @@ mod 'scripts',
 mod 's3fs',
   :git     => 'https://github.com/localmotors/puppet-s3fs.git',
   :branch  => 'master'
-mod 'dependency',
-  :git     => 'https://github.com/localmotors/puppet-dependency.git',
-  :branch  => 'master'
