@@ -1,4 +1,4 @@
-#Puppet Master Setup
+# Puppet Master Setup
 Initial setup for a puppetmaster server  
 *Tested on Ubuntu 14.04*
 
