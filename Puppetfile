@@ -1,14 +1,14 @@
 forge "http://forge.puppetlabs.com"
 
 # Modules from the puppet forge
-mod 'jfryman/nginx', '0.2.6'
-mod 'puppetlabs/postgresql', '4.3.0'
+mod 'jfryman/nginx', '0.2.7'
+mod 'puppetlabs/postgresql', '4.6.0'
 mod 'puppetlabs/nodejs', '0.8.0'
-mod 'puppetlabs/ntp'
-mod 'puppetlabs/vcsrepo'
-mod 'puppetlabs/git'
-mod 'puppetlabs/java_ks'
-mod 'wdijkerman/zabbix'
+mod 'puppetlabs/ntp', '4.1.0'
+mod 'puppetlabs/vcsrepo', '1.3.1'
+mod 'puppetlabs/git', '0.4.0'
+mod 'puppetlabs/java_ks', '1.3.1'
+mod 'wdijkerman/zabbix', '1.6.0'
 
 # dependencies of modules above. r10k does not yet fetch dependencies.
 mod 'puppetlabs/stdlib'
