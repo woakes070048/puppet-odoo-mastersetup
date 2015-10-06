@@ -13,7 +13,7 @@ mod 'wdijkerman/zabbix'
 # dependencies of modules above. r10k does not yet fetch dependencies.
 mod 'puppetlabs/stdlib'
 mod 'puppetlabs/concat'
-mod 'puppetlabs/apt', '2.2.0'
+mod 'puppetlabs/apt'
 mod 'richardc/datacat'
 
 # dependencies for zabbix
