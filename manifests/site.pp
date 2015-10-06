@@ -13,3 +13,7 @@ node /^dbbackup.(erp|local)/ {
 node /redirects/ {
   include roles::redirects
 }
+
+node /^zabbix/ {
+  include roles::zabbixserver
+}

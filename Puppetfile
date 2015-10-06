@@ -8,12 +8,20 @@ mod 'puppetlabs/ntp'
 mod 'puppetlabs/vcsrepo'
 mod 'puppetlabs/git'
 mod 'puppetlabs/java_ks'
+mod 'wdijkerman/zabbix'
 
 # dependencies of modules above. r10k does not yet fetch dependencies.
 mod 'puppetlabs/stdlib'
 mod 'puppetlabs/concat'
 mod 'puppetlabs/apt'
 mod 'richardc/datacat'
+
+# dependencies for zabbix
+mod 'puppetlabs/mysql'
+mod 'puppetlabs/apache'
+mod 'puppetlabs/firewall'
+mod 'puppetlabs/ruby'
+mod 'puppetlabs/pe_gem'
 
 # custom modules from github
 mod 'odoo',
