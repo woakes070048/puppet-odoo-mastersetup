@@ -9,7 +9,7 @@ mod 'puppetlabs/vcsrepo', '1.3.1'
 mod 'puppetlabs/git', '0.4.0'
 mod 'puppetlabs/java_ks', '1.3.1'
 mod 'wdijkerman/zabbix', '1.6.0'
-mod 'dalen/puppetdbquery', '2.0.0'
+mod 'dalen/puppetdbquery', '1.6.1'
 
 # dependencies of modules above. r10k does not yet fetch dependencies.
 mod 'puppetlabs/stdlib'
