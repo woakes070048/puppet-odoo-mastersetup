@@ -17,7 +17,7 @@ mod 'puppetlabs/concat'
 mod 'puppetlabs/apt'
 mod 'richardc/datacat'
 
-# dependencies for zabbix
+# dependencies for zabbix and snipeit
 mod 'puppetlabs/mysql'
 mod 'puppetlabs/apache'
 mod 'puppetlabs/firewall'
