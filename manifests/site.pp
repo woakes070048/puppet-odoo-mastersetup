@@ -17,3 +17,7 @@ node /redirects/ {
 node /^zabbix/ {
   include roles::zabbixserver
 }
+
+node /^itassets/ {
+  include roles::itassets
+}
