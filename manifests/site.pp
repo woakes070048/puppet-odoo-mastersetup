@@ -1,6 +1,6 @@
 node /^dev.(erp|local)/ {
   include roles::dev
 }
-node /^odoo.local/ {
+node /^erp.local/ {
   include roles::vagrant_private
 }
