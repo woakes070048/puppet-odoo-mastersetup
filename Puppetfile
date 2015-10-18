@@ -10,14 +10,13 @@ mod 'puppetlabs/git', '0.4.0'
 mod 'puppetlabs/java_ks', '1.3.1'
 mod 'wdijkerman/zabbix', '1.6.0'
 mod 'dalen/puppetdbquery', '1.6.1'
-mod 'example42/timezone', '2.0.12'
+mod 'saz/timezone', '3.3.0'
 
 # dependencies of modules above. r10k does not yet fetch dependencies.
 mod 'puppetlabs/stdlib'
 mod 'puppetlabs/concat'
 mod 'puppetlabs/apt'
 mod 'richardc/datacat'
-mod 'example42/puppi'
 
 # dependencies for zabbix and snipeit
 mod 'puppetlabs/mysql'
