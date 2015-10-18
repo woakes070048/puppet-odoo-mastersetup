@@ -1,5 +1,5 @@
-node /^prod\d+.(erp|local)/ {
-  include roles::production
+node /^erp\d+.(erp|local)/ {
+  include roles::erp
 }
 
 node /^qa.(erp|local)/ {
