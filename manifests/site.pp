@@ -1,4 +1,4 @@
-node /^erp\d+.(erp|local)/ {
+node /^erp(\d*).(erp|local)/ {
   include roles::erp
 }
 
