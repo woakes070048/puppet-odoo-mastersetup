@@ -1,5 +1,3 @@
-hiera_include('testusers')
-
 node /^prod\d+.(erp|local)/ {
   include roles::production
 }
