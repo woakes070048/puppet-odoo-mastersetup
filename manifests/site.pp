@@ -20,5 +20,4 @@ node /^zabbix/ {
 
 node /^itassets/ {
   include roles::itassets
-  hiera_include('testusers')
 }
