@@ -9,6 +9,7 @@ mod 'puppetlabs/vcsrepo'
 mod 'puppetlabs/git'
 mod 'puppetlabs/java_ks'
 mod 'puppet/mcollective', '2.1.1'
+mod 'maestrodev/wget', '1.7.1'
 
 # dependencies of modules above. r10k does not yet fetch dependencies.
 mod 'puppetlabs/stdlib'
