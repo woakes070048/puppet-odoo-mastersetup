@@ -11,6 +11,7 @@ mod 'puppetlabs/java_ks', '1.3.1'
 mod 'wdijkerman/zabbix', '1.6.0'
 mod 'dalen/puppetdbquery', '1.6.1'
 mod 'saz/timezone', '3.3.0'
+mod 'maestrodev/wget', '1.7.1'
 
 # dependencies of modules above. r10k does not yet fetch dependencies.
 mod 'puppetlabs/stdlib'
