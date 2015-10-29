@@ -114,7 +114,7 @@ file { "${::settings::confdir}/hiera.yaml":
   - \"%{::clientcert}\"
   - \"%{::environment}\"
   - techusers
-  - supportusers
+  - ursausers
   - common
 :file:
   :datadir: \"/etc/puppet/data\"",
