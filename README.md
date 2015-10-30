@@ -14,6 +14,7 @@ cd /usr/local/src
 wget https://apt.puppetlabs.com/puppetlabs-release-trusty.deb
 dpkg -i puppetlabs-release-trusty.deb
 apt-get update
+apt-get upgrade -y
 apt-get install puppet puppetserver git crudini -y
 ```
 * Configure initial settings
