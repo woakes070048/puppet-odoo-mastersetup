@@ -121,7 +121,7 @@ file { "${::settings::confdir}/hiera.yaml":
 }
 
 user { 'git':
-    ensure     => "present",
+    ensure     => 'present',
     managehome => true,
     groups     => 'puppet',
   }
@@ -129,41 +129,42 @@ user { 'git':
     ensure  => 'directory',
     owner   => 'git',
     group   => 'git',
-    mode    => 0750,
+    mode    => '0750',
     require => User['git'],
   }
   file { '/home/git/.ssh/authorized_keys':
     owner   => 'git',
     group   => 'git',
-    mode    => '600',
+    mode    => '0600',
     require => [User['git'],File['/home/git/.ssh']],
   }
   file { '/var/local/hiera.git':
     ensure  => 'directory',
     owner   => 'git',
     group   => 'git',
-    mode    => 0750,
+    mode    => '0750',
     require => User['git'],
   }
   exec { 'setup hiera repo':
-    user     => 'git',
-    command  => '/usr/bin/git init --bare /var/local/hiera.git',
-    unless   => '/usr/bin/test -d /var/local/hiera.git./.git',
-    require  => [File['/var/local/hiera.git'],User['git']],
+    user    => 'git',
+    command => '/usr/bin/git init --bare /var/local/hiera.git',
+    unless  => '/usr/bin/test -d /var/local/hiera.git./.git',
+    require => [File['/var/local/hiera.git'],User['git']],
   }
   file { '/var/local/hiera.git/hooks/post-receive':
     owner   => 'git',
     group   => 'git',
-    mode    => 0750,
+    mode    => '0750',
     content => '#!/bin/bash
 
 worktree="/etc/puppet/data"
-gitdir="/var/local/hiera.git"
+unset GIT_DIR
 
-cd ${worktree}
+cd $worktree
+git pull
 git reset --hard
 git clean -f
-git --work-tree=${worktree} --git-dir=${gitdir} checkout -f
+git checkout -f
 chmod -R g-w,o= $worktree
 chgrp -R puppet $worktree',
     require => [User['git'],Exec['setup hiera repo']],
@@ -172,7 +173,7 @@ chgrp -R puppet $worktree',
     ensure  => 'directory',
     owner   => 'git',
     group   => 'puppet',
-    mode    => 0750,
+    mode    => '0750',
     require => User['git'],
   }
   exec {'setup hiera data':
